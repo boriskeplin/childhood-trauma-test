@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add: Memory Processing Guide — Breeze</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F1018;--card:#191C28;--accent:#5ACFB3;--text:#FFFFFF;--muted:#9CA3AF;--border:rgba(255,255,255,.1)}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding-bottom:100px}
+.progress-wrap{width:100%;max-width:420px;padding:20px 20px 0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.logo{font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
+.progress-label{font-size:12px;color:var(--muted)}
+.progress-dots{display:flex;gap:6px}
+.dot{width:28px;height:6px;border-radius:3px}
+.dot.active{background:var(--accent)}
+.dot.done{background:rgba(90,207,179,.4)}
+.content{width:100%;max-width:420px;padding:20px}
+
+/* Hero image */
+.hero-img-wrap{border-radius:20px;overflow:hidden;margin-bottom:22px;position:relative}
+.hero-img{width:100%;height:180px;object-fit:cover;display:block;filter:brightness(.4)}
+.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center}
+.hero-icon{font-size:36px;margin-bottom:8px}
+.hero-title{font-size:15px;font-weight:700}
+.hero-sub{font-size:12px;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* Safety notice */
+.safety{background:rgba(90,207,179,.07);border:1px solid rgba(90,207,179,.2);border-radius:14px;padding:14px;margin-bottom:20px;display:flex;gap:10px;align-items:flex-start}
+.safety-icon{font-size:18px;flex-shrink:0}
+.safety-text{font-size:12px;color:var(--muted);line-height:1.6}
+.safety-text strong{color:var(--accent)}
+
+/* Techniques */
+.techniques{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.technique{background:var(--card);border-radius:12px;padding:14px;display:flex;gap:12px;align-items:flex-start}
+.tech-num{width:28px;height:28px;border-radius:8px;background:rgba(90,207,179,.1);color:var(--accent);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tech-info{flex:1}
+.tech-name{font-size:13px;font-weight:600;margin-bottom:2px}
+.tech-desc{font-size:11px;color:var(--muted);line-height:1.5}
+
+.offer-title{font-size:22px;font-weight:800;line-height:1.25;margin-bottom:10px}
+.offer-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.what-you-get{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.bullets{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+.bullet-check{width:20px;height:20px;border-radius:50%;background:rgba(90,207,179,.15);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px}
+
+.final-note{background:var(--card);border-radius:12px;padding:14px;margin-bottom:8px;font-size:12px;color:var(--muted);line-height:1.6;text-align:center;font-style:italic}
+
+.cta-wrap{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);padding:16px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:50}
+.cta-btn{display:block;width:100%;max-width:380px;background:var(--accent);color:#0F1018;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;border:none;border-radius:12px;padding:17px;cursor:pointer;transition:opacity .2s}
+.cta-btn:hover{opacity:.9}
+.cta-charge{font-size:11px;color:var(--muted);text-align:center}
+.skip-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;font-family:'Poppins',sans-serif}
+</style>
+</head>
+<body>
+<div class="progress-wrap">
+  <div class="logo">breeze</div>
+  <div class="progress-label">Personalizing your plan — 7 of 7</div>
+  <div class="progress-dots">
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot active"></div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="hero-img-wrap">
+    <img class="hero-img" src="assets/question_with_image_child_eye.63ed3be8.webp" alt="Memory Processing">
+    <div class="hero-overlay">
+      <div class="hero-icon">🔦</div>
+      <div class="hero-title">Childhood Memory Processing Guide</div>
+      <div class="hero-sub">Safe, structured techniques to revisit and release</div>
+    </div>
+  </div>
+
+  <div class="safety">
+    <div class="safety-icon">🛡️</div>
+    <div class="safety-text"><strong>Designed for safety first.</strong> These techniques are adapted from EMDR and somatic trauma therapy. They are structured so you stay in control — you never go further than feels right.</div>
+  </div>
+
+  <div class="offer-title">Process the memories that still affect you today</div>
+  <div class="offer-desc">
+    Some memories don't fade — they stay sharp, intrusive, or just feel heavy without knowing why. This guide teaches you how to safely revisit and release them, so they lose their emotional charge without re-traumatising you in the process.
+  </div>
+
+  <div class="what-you-get">What you get</div>
+  <div class="bullets">
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>A readiness assessment — determine which memories are safe to process now vs later</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>The Dual Awareness Technique — process a memory while staying grounded in the present</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>Written processing prompts — structured journaling that draws out and reframes difficult memories</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>The Memory Container exercise — a technique to safely store memories when you're not ready to process them yet</span>
+    </div>
+  </div>
+
+  <div class="techniques">
+    <div class="technique">
+      <div class="tech-num">1</div>
+      <div class="tech-info"><div class="tech-name">Dual Awareness</div><div class="tech-desc">EMDR-adapted. Stay present while revisiting the past.</div></div>
+    </div>
+    <div class="technique">
+      <div class="tech-num">2</div>
+      <div class="tech-info"><div class="tech-name">Written Processing</div><div class="tech-desc">Structured prompts that move memories from implicit to explicit memory.</div></div>
+    </div>
+    <div class="technique">
+      <div class="tech-num">3</div>
+      <div class="tech-info"><div class="tech-name">Memory Container</div><div class="tech-desc">A safe mental space for memories you're not ready to process yet.</div></div>
+    </div>
+  </div>
+
+  <div class="final-note">"This is the last step before your plan is complete. You've covered a lot of ground — your healing roadmap is almost ready."</div>
+</div>
+
+<div class="cta-wrap">
+  <button class="cta-btn" onclick="addUpsell7()">+ Add Memory Processing Guide for £4</button>
+  <div class="cta-charge">One-time charge of £4. No subscription, no recurring charges.</div>
+  <button class="skip-btn" onclick="skipUpsell7()">No thanks, go to my plan</button>
+</div>
+
+<script>
+async function addUpsell7() {
+  const btn = document.querySelector('.cta-btn');
+  btn.textContent = 'Adding...'; btn.style.opacity = '.7';
+  // TODO: await fetch('/api/upsell-charge', { method:'POST', body: JSON.stringify({ amount:400, currency:'gbp', product:'memory-processing-guide' }) })
+  setTimeout(() => { window.location.href = 'dashboard.html'; }, 1200);
+}
+function skipUpsell7() { window.location.href = 'downsell7.html'; }
+</script>
+</body>
+</html>

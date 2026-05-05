@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add: Anxiety Management Kit — Breeze</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F1018;--card:#191C28;--accent:#5ACFB3;--text:#FFFFFF;--muted:#9CA3AF;--border:rgba(255,255,255,.1)}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding-bottom:100px}
+.progress-wrap{width:100%;max-width:420px;padding:20px 20px 0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.logo{font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
+.progress-label{font-size:12px;color:var(--muted)}
+.progress-dots{display:flex;gap:6px}
+.dot{width:28px;height:6px;border-radius:3px}
+.dot.active{background:var(--accent)}
+.dot.done{background:rgba(90,207,179,.4)}
+.dot.future{background:rgba(255,255,255,.12)}
+.content{width:100%;max-width:420px;padding:20px}
+
+/* Anxiety meter */
+.meter-card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:22px;text-align:center}
+.meter-label{font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:600}
+.meter-bar{height:12px;background:rgba(255,255,255,.06);border-radius:6px;overflow:hidden;margin-bottom:8px;position:relative}
+.meter-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#5ACFB3,#FBBF24,#F87171);width:72%}
+.meter-val{font-size:22px;font-weight:800;color:#F97316}
+.meter-sub{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* Tool cards */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.tool{background:var(--card);border-radius:12px;padding:12px;text-align:center}
+.tool-icon{font-size:22px;margin-bottom:6px}
+.tool-name{font-size:11px;font-weight:700;margin-bottom:2px}
+.tool-desc{font-size:10px;color:var(--muted);line-height:1.4}
+
+.offer-title{font-size:22px;font-weight:800;line-height:1.25;margin-bottom:10px}
+.offer-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.what-you-get{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.bullets{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+.bullet-check{width:20px;height:20px;border-radius:50%;background:rgba(90,207,179,.15);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px}
+
+.testi{background:var(--card);border-radius:14px;padding:16px;margin-bottom:8px;border-left:3px solid var(--accent)}
+.testi-text{font-size:12px;line-height:1.6;color:#E5E7EB;font-style:italic;margin-bottom:6px}
+.testi-name{font-size:11px;color:var(--muted);font-weight:600}
+
+.cta-wrap{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);padding:16px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:50}
+.cta-btn{display:block;width:100%;max-width:380px;background:var(--accent);color:#0F1018;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;border:none;border-radius:12px;padding:17px;cursor:pointer;transition:opacity .2s}
+.cta-btn:hover{opacity:.9}
+.cta-charge{font-size:11px;color:var(--muted);text-align:center}
+.skip-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;font-family:'Poppins',sans-serif}
+</style>
+</head>
+<body>
+<div class="progress-wrap">
+  <div class="logo">breeze</div>
+  <div class="progress-label">Personalizing your plan — 6 of 7</div>
+  <div class="progress-dots">
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot done"></div>
+    <div class="dot active"></div>
+    <div class="dot future"></div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="meter-card">
+    <div class="meter-label">Your anxiety level from quiz results</div>
+    <div class="meter-bar"><div class="meter-fill"></div></div>
+    <div class="meter-val">High</div>
+    <div class="meter-sub">Based on your trauma pattern & emotional response answers</div>
+  </div>
+
+  <div class="tools">
+    <div class="tool"><div class="tool-icon">🫁</div><div class="tool-name">Breathing Protocols</div><div class="tool-desc">Regulate panic & overwhelm fast</div></div>
+    <div class="tool"><div class="tool-icon">🧊</div><div class="tool-name">Grounding Kit</div><div class="tool-desc">5-sense technique & variations</div></div>
+    <div class="tool"><div class="tool-icon">🗂️</div><div class="tool-name">Trigger Mapping</div><div class="tool-desc">Predict & prepare for your triggers</div></div>
+    <div class="tool"><div class="tool-icon">💤</div><div class="tool-name">Sleep Protocol</div><div class="tool-desc">Wind down an anxious nervous system</div></div>
+  </div>
+
+  <div class="offer-title">Manage the anxiety — not just cope with it</div>
+  <div class="offer-desc">
+    Trauma-based anxiety is different from regular stress. It fires without warning and feels impossible to control because it's rooted in your body's threat response — not your thoughts. This kit gives you specific, evidence-based tools designed for trauma-driven anxiety specifically.
+  </div>
+
+  <div class="what-you-get">What you get</div>
+  <div class="bullets">
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>Your personal trigger map — identify what sets off your anxiety and prepare responses in advance</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>4 breathing protocols for different anxiety states: mild worry, spiralling thoughts, panic, and shutdown</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>A grounding kit with 6 techniques so you always have one that works regardless of where you are</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>The trauma-anxiety sleep protocol — a step-by-step wind-down that signals safety to your nervous system</span>
+    </div>
+  </div>
+
+  <div class="testi">
+    <div class="testi-text">"I used to spiral every Sunday night. The trigger mapping exercise showed me it was tied to school anxiety from my childhood. Once I named it, I could actually do something about it."</div>
+    <div class="testi-name">— Kezia M., 33 ★★★★★</div>
+  </div>
+</div>
+
+<div class="cta-wrap">
+  <button class="cta-btn" onclick="addUpsell6()">+ Add Anxiety Management Kit for £4</button>
+  <div class="cta-charge">One-time charge of £4. No subscription, no recurring charges.</div>
+  <button class="skip-btn" onclick="skipUpsell6()">No thanks, skip this</button>
+</div>
+
+<script>
+async function addUpsell6() {
+  const btn = document.querySelector('.cta-btn');
+  btn.textContent = 'Adding...'; btn.style.opacity = '.7';
+  // TODO: await fetch('/api/upsell-charge', { method:'POST', body: JSON.stringify({ amount:400, currency:'gbp', product:'anxiety-kit' }) })
+  setTimeout(() => { window.location.href = 'upsell7.html'; }, 1200);
+}
+function skipUpsell6() { window.location.href = 'downsell6.html'; }
+</script>
+</body>
+</html>

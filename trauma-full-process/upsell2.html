@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add: Relationship Report — Breeze</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F1018;--card:#191C28;--accent:#5ACFB3;--text:#FFFFFF;--muted:#9CA3AF;--border:rgba(255,255,255,.1)}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding-bottom:100px}
+
+.progress-wrap{width:100%;max-width:420px;padding:20px 20px 0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.logo{font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
+.progress-label{font-size:12px;color:var(--muted)}
+.progress-dots{display:flex;gap:6px}
+.dot{width:28px;height:6px;border-radius:3px}
+.dot.active{background:var(--accent)}
+.dot.done{background:rgba(90,207,179,.4)}
+.dot.future{background:rgba(255,255,255,.12)}
+
+.content{width:100%;max-width:420px;padding:20px}
+
+.preview-card{position:relative;background:var(--card);border-radius:20px;overflow:hidden;margin-bottom:22px}
+.preview-img{width:100%;height:200px;object-fit:cover;display:block;filter:brightness(.5)}
+.preview-labels{position:absolute;inset:0;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+.preview-label{background:rgba(15,16,24,.8);border:1px solid rgba(90,207,179,.3);border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;color:var(--accent);display:inline-block;align-self:flex-start}
+.preview-label.right{align-self:flex-end}
+.preview-label.center{align-self:center}
+
+.offer-title{font-size:22px;font-weight:800;line-height:1.25;margin-bottom:10px}
+.offer-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+
+.what-you-get{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.bullets{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+.bullet-check{width:20px;height:20px;border-radius:50%;background:rgba(90,207,179,.15);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px}
+
+/* Testimonial snippet */
+.testi{background:var(--card);border-radius:14px;padding:16px;margin-bottom:8px;border-left:3px solid var(--accent)}
+.testi-text{font-size:12px;line-height:1.6;color:#E5E7EB;margin-bottom:8px;font-style:italic}
+.testi-name{font-size:11px;color:var(--muted);font-weight:600}
+
+.cta-wrap{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);padding:16px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:50}
+.cta-btn{display:block;width:100%;max-width:380px;background:var(--accent);color:#0F1018;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;border:none;border-radius:12px;padding:17px;cursor:pointer;transition:opacity .2s}
+.cta-btn:hover{opacity:.9}
+.cta-charge{font-size:11px;color:var(--muted);text-align:center;max-width:340px}
+.skip-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;font-family:'Poppins',sans-serif}
+</style>
+</head>
+<body>
+
+<div class="progress-wrap">
+  <div class="logo">breeze</div>
+  <div class="progress-label">Personalizing your plan — 2 of 7</div>
+  <div class="progress-dots">
+    <div class="dot done"></div>
+    <div class="dot active"></div>
+    <div class="dot future"></div>
+    <div class="dot future"></div>
+    <div class="dot future"></div>
+    <div class="dot future"></div>
+    <div class="dot future"></div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="preview-card">
+    <img class="preview-img" src="assets/guide_wellbeing.cb2d6c76.webp" alt="Relationship Report">
+    <div class="preview-labels">
+      <div class="preview-label">Attachment Style</div>
+      <div class="preview-label center">Trauma Bonds</div>
+      <div class="preview-label right">Healing Roadmap</div>
+    </div>
+  </div>
+
+  <div class="offer-title">Unlock Your Relationship Pattern Analysis</div>
+  <div class="offer-desc">
+    Childhood trauma doesn't just affect you — it shapes everyone you're close to. This analysis reveals exactly how your early experiences created your attachment style, why you attract the same types, and how to break the cycle for good.
+  </div>
+
+  <div class="what-you-get">What you get</div>
+  <div class="bullets">
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>Your exact attachment style (anxious, avoidant, disorganized, or secure) and how it developed from your childhood</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>The specific trauma patterns drawing you toward certain relationship dynamics — and how to recognize them in real time</span>
+    </div>
+    <div class="bullet">
+      <div class="bullet-check">✓</div>
+      <span>A practical guide to building secure attachment — whether you're single, dating, or in a relationship right now</span>
+    </div>
+  </div>
+
+  <div class="testi">
+    <div class="testi-text">"I had no idea how much my childhood was affecting my relationship. I kept chasing emotionally unavailable people and had no idea why — until this report explained my anxious attachment. It finally made sense."</div>
+    <div class="testi-name">— Priya K., 27 ★★★★★</div>
+  </div>
+</div>
+
+<div class="cta-wrap">
+  <button class="cta-btn" onclick="addUpsell2()">+ Add Relationship Analysis for £4</button>
+  <div class="cta-charge">One-time charge of £4. No subscription, no recurring charges.</div>
+  <button class="skip-btn" onclick="skipUpsell2()">No thanks, skip this</button>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// STRIPE ONE-CLICK UPSELL 2 — TODO:
+// Same saved PaymentMethod from initial £1 charge.
+// Server endpoint /api/upsell-charge: amount=400, currency='gbp'
+// ═══════════════════════════════════════════════════════════════
+async function addUpsell2() {
+  const btn = document.querySelector('.cta-btn');
+  btn.textContent = 'Adding...';
+  btn.style.opacity = '.7';
+  // TODO: await fetch('/api/upsell-charge', { method:'POST', body: JSON.stringify({ amount:400, currency:'gbp', product:'relationship-analysis' }) })
+  setTimeout(() => { window.location.href = 'upsell3.html'; }, 1200);
+}
+
+function skipUpsell2() {
+  window.location.href = 'downsell2.html';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wait — Special Offer — Breeze</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F1018;--card:#191C28;--accent:#5ACFB3;--text:#FFFFFF;--muted:#9CA3AF;--border:rgba(255,255,255,.1);--red:#EF4444}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 0 100px}
+
+.top-banner{width:100%;background:rgba(239,68,68,.9);color:#fff;text-align:center;padding:10px 16px;font-size:13px;font-weight:600}
+
+.content{width:100%;max-width:420px;padding:28px 20px 0}
+.logo{font-size:20px;font-weight:700;color:var(--accent);text-align:center;margin-bottom:24px;letter-spacing:-.5px}
+
+.wait-badge{display:inline-block;background:rgba(251,191,36,.15);color:#FBBF24;font-size:11px;font-weight:700;padding:5px 12px;border-radius:10px;margin-bottom:14px;letter-spacing:.3px}
+.title{font-size:22px;font-weight:800;line-height:1.3;margin-bottom:10px}
+.sub{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:22px}
+
+/* Price comparison */
+.price-compare{background:var(--card);border-radius:16px;padding:18px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price-was{text-align:center;flex:1}
+.price-was-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.price-was-val{font-size:22px;font-weight:700;text-decoration:line-through;color:var(--muted)}
+.price-arrow{font-size:20px;color:var(--accent)}
+.price-now{text-align:center;flex:1}
+.price-now-label{font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;font-weight:700}
+.price-now-val{font-size:32px;font-weight:800;color:var(--accent)}
+
+/* What's included (mini version) */
+.mini-card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:22px}
+.mini-title{font-size:14px;font-weight:700;margin-bottom:4px}
+.mini-sub{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.mini-items{display:flex;flex-direction:column;gap:8px}
+.mini-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5}
+.mini-check{color:var(--accent);font-size:13px;margin-top:1px;flex-shrink:0}
+.mini-x{color:#F87171;font-size:13px;margin-top:1px;flex-shrink:0}
+.mini-muted{color:var(--muted)}
+
+/* CTAs */
+.cta-wrap{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid var(--border);padding:16px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.cta-btn{display:block;width:100%;max-width:380px;background:var(--accent);color:#0F1018;font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:12px;padding:16px;cursor:pointer;transition:opacity .2s}
+.cta-btn:hover{opacity:.9}
+.cta-charge{font-size:11px;color:var(--muted);text-align:center}
+.skip-btn{font-size:12px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;font-family:'Poppins',sans-serif}
+</style>
+</head>
+<body>
+
+<div class="top-banner">⚡ One-time offer — this won't appear again</div>
+
+<div class="content">
+  <div class="logo">breeze</div>
+
+  <div class="wait-badge">WAIT — SPECIAL OFFER</div>
+  <div class="title">Get the Inner Child Assessment for half price</div>
+  <div class="sub">
+    You skipped the full report — that's okay. But before you go, we'd like to offer you just the assessment portion at 50% off. Find out your wound type in minutes.
+  </div>
+
+  <!-- Price comparison -->
+  <div class="price-compare">
+    <div class="price-was">
+      <div class="price-was-label">Full report</div>
+      <div class="price-was-val">£4</div>
+    </div>
+    <div class="price-arrow">→</div>
+    <div class="price-now">
+      <div class="price-now-label">Your price today</div>
+      <div class="price-now-val">£2</div>
+    </div>
+  </div>
+
+  <!-- Mini vs full comparison -->
+  <div class="mini-card">
+    <div class="mini-title">Inner Child Quick Assessment</div>
+    <div class="mini-sub">What you get at £2 vs the full £4 report:</div>
+    <div class="mini-items">
+      <div class="mini-item">
+        <span class="mini-check">✓</span>
+        <span>Your specific childhood wound type identified (abandonment, neglect, rejection, enmeshment, or humiliation)</span>
+      </div>
+      <div class="mini-item">
+        <span class="mini-check">✓</span>
+        <span>How your wound shows up in everyday life — with examples from your answers</span>
+      </div>
+      <div class="mini-item">
+        <span class="mini-x">✕</span>
+        <span class="mini-muted">7-step reparenting protocol (full report only)</span>
+      </div>
+      <div class="mini-item">
+        <span class="mini-x">✕</span>
+        <span class="mini-muted">Detailed healing exercises (full report only)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-wrap">
+  <button class="cta-btn" onclick="takeDeal()">Yes — Add Assessment for £2</button>
+  <div class="cta-charge">One-time charge of £2. No subscription, no recurring fees.</div>
+  <button class="skip-btn" onclick="skipAll()">No thanks, continue without it</button>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// STRIPE DOWNSELL — TODO:
+// Same as upsell — use saved PaymentMethod for one-click charge.
+// Server endpoint /api/downsell-charge: amount=200, currency='gbp'
+// ═══════════════════════════════════════════════════════════════
+async function takeDeal() {
+  const btn = document.querySelector('.cta-btn');
+  btn.textContent = 'Adding...';
+  btn.style.opacity = '.7';
+  // TODO: await fetch('/api/downsell-charge', { method:'POST', body: JSON.stringify({ amount:200, currency:'gbp' }) })
+  setTimeout(() => { window.location.href = 'upsell2.html'; }, 1200);
+}
+
+function skipAll() {
+  window.location.href = 'upsell2.html';
+}
+</script>
+</body>
+</html>
